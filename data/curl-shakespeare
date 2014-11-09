@@ -1,6 +1,7 @@
 #/bin/sh
 #
 
+echo "Start Index Create" 
 curl -XPUT http://$DOCKER_HOST_IP:9200/shakespeare -d '
 {
  "mappings" : {
@@ -16,4 +17,12 @@ curl -XPUT http://$DOCKER_HOST_IP:9200/shakespeare -d '
 }
 ';
 
-curl -XPUT  http://$DOCKER_HOST_IP/_bulk --data-binary @shakespeare.json
+echo
+
+echo "Start Bulk Load"
+
+curl -XPUT  http://$DOCKER_HOST_IP:9200/_bulk --data-binary @shakespeare.json
+
+echo
+echo "End "
+
