@@ -9,10 +9,10 @@ FROM dockerfile/java:oracle-java7
 # Install ElasticSearch.
 RUN \
   cd /tmp && \
-  wget https://download.elasticsearch.org/elasticsearch/elasticsearch/elasticsearch-1.4.0.Beta1.tar.gz && \
-  tar xvzf elasticsearch-1.4.0.Beta1.tar.gz && \
-  rm -f elasticsearch-1.4.0.Beta1.tar.gz && \
-  mv /tmp/elasticsearch-1.4.0.Beta1 /elasticsearch
+  wget https://download.elasticsearch.org/elasticsearch/elasticsearch/elasticsearch-1.4.0.tar.gz && \
+  tar xvzf elasticsearch-1.4.0.tar.gz && \
+  rm -f elasticsearch-1.4.0.tar.gz && \
+  mv /tmp/elasticsearch-1.4.0 /elasticsearch
 
 
 # Define mountable directories.
