@@ -2,6 +2,7 @@
 #
 
 echo "Start Index Create" 
+echo off
 curl -XPUT http://$DOCKER_HOST_IP:9200/shakespeare -d '
 {
  "mappings" : {
